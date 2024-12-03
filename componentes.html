@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes em Bootstrap</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class=" col-12 p-3 bg-dark">
+                <a href="componentes.html" class="link-light m-4" style="text-decoration: none;" target="_self"><b>PERFIL PROFISSIONAL</b></a>
+                <a href="faleconosco.html" class="link-light m-3" style="text-decoration: none;" target="_self">Fale conosco</a>
+                <a href="portifolio.html" class="link-light m-3" style="text-decoration: none;" target="_self">Portifólio</a>
+            </div>
+            <div class="row mt-4">
+                <div class="col">
+                    <div class="dropdown">
+                        <button class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Menu
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="faleconosco.html">Fale Conosco</a></li>
+                            <li><a class="dropdown-item" href="portifolio.html">Portifólio</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Fechar Menu</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h1 style="text-align: center;">
+
+                João Pedro Collaneri Scolástico
+            </h1>
+            <h4 style="text-align: center;"> 
+                Perfil Profissional
+            </h4>
+            <br>
+        </div>
+
+        <!--EXPERIENCIA PROFISSIONAL-->
+        <div class="accordion mt-5" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Expêriencia Profissional
+                    </button>
+                </h2>
+
+                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Nenhuma
+                    </div>
+                </div>
+            </div>
+
+            <!--Habilidades-->
+            <div class="accordion-item mt-2">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Habilidades
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Tocar piano
+                    </div>
+                </div>
+            </div>
+
+            <!--FORMAÇÃO-->
+            <div class="accordion-item mt-2">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Formação
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Desenvolvimento de Sistemas
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="socialModal" tabindex="-1" aria-labelledby="socialModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="socialModalLabel">Redes Sociais</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <a href="https://www.youtube.com/@jpcrowmito4983" target="_blank"
+                            class="btn btn-outline-light bg-danger m-2">Youtube</a>
+                        <a href="https://www.instagram.com/jpscolastico/" target="_blank"
+                            class="btn btn-outline-light bg-primary m-2">Instagram</a>
+                        <a href="https://open.spotify.com/playlist/0cLULnRkQMUVb92OviQQAd" target="_blank"
+                            class="btn btn-outline-dark bg-success m-2">Spotify</a>
+                        <a href="faleconosco.html" target="_self" 
+                            class="btn btn-outline-dark bg-light m-2">Fale conosco</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center mt-5 p-4 bg-dark">
+        <button type="button" class="btn btn-primary p-3" data-bs-toggle="modal" data-bs-target="#socialModal">
+            Redes Sociais
+        </button>
+    </footer>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script>
+        //Tooltip
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="notificacao"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl =>
+            new bootstrap.Tooltip(tooltipTriggerEl))
+
+        // Função para alternar entre a lâmpada acesa e apagada
+        function alternarLampada() {
+            var lampada = document.getElementById("lampada");
+            
+            // Verifica a imagem atual e alterna para a outra
+            if (lampada.src.includes("imagens/lampada_apagada.png")) {
+                lampada.src = "imagens/lampada_acesa.png"; // Lâmpada acesa
+            } else {
+                lampada.src = "imagens/lampada_apagada.png"; // Lâmpada apagada
+            }
+        }
+    </script>
+</body>
+
+</html>

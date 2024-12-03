@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifólio</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class=" col-12 p-3 bg-dark">
+                <a href="componentes.html" class="link-light m-4" style="text-decoration: none;" target="_self"><b>PERFIL PROFISSIONAL</b></a>
+                <a href="faleconosco.html" class="link-light m-3" style="text-decoration: none;" target="_self">Fale conosco</a>
+                <a href="portifolio.html" class="link-light m-3" style="text-decoration: none;" target="_self">Portifólio</a>
+            </div>
+            <div class="mt-5 text-center">
+                <h1>Projeto Eurocopa</h1>
+                <img src="imagens/Captura de Tela 2024-12-03 às 14.41.58.png" style="width: 1000px;">
+            </div>
+            <div class="text-center mt-3">
+                <h1>Lâmpada</h1>
+                <img id="lampada" src="imagens/lampada_apagada.png" alt="Lâmpada"/>
+                <br>
+                <button onclick="alternarLampada()" class="mt-3">Acender/Apagar</button>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="text-center mt-5 p-3 bg-dark">
+        <button type="button" class="btn btn-primary p-3" data-bs-toggle="modal" data-bs-target="#socialModal">
+            Redes Sociais
+        </button>
+    </footer>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script>
+        //Tooltip
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="notificacao"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl =>
+            new bootstrap.Tooltip(tooltipTriggerEl))
+
+        // Função para alternar entre a lâmpada acesa e apagada
+        function alternarLampada() {
+            var lampada = document.getElementById("lampada");
+            
+            // Verifica a imagem atual e alterna para a outra
+            if (lampada.src.includes("imagens/lampada_apagada.png")) {
+                lampada.src = "imagens/lampada_acesa.png"; // Lâmpada acesa
+            } else {
+                lampada.src = "imagens/lampada_apagada.png"; // Lâmpada apagada
+            }
+        }
+    </script>
+    
+</body>
+</html>
